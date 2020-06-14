@@ -518,9 +518,10 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 "=
 autocmd User Startified setlocal buflisted
 let  g:floaterm_keymap_new     =  '<Leader>fo'
-let  g:floaterm_keymap_next    =  '<F8>'
+"let  g:floaterm_keymap_next    =  '<C-f><C-n>'
+let  g:floaterm_keymap_next    =  '<Leader>fn'
 let  g:floaterm_keymap_kill    =  '<Leader>fk'
-let  g:floaterm_keymap_toggle  =  '<Leader>ft'
+let  g:floaterm_keymap_toggle  =  '<Leader>fh'
 map  <Leader>fl :FloatermNew lf<CR>
 map  <Leader>ff :FZF<CR>
 map  <Leader>fg :FloatermNew lazygit<CR>
