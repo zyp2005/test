@@ -214,6 +214,7 @@ hi Normal       ctermbg=NONE guibg=NONE
 hi LineNr       ctermbg=NONE guibg=NONE
 hi SignColumn   ctermbg=NONE guibg=NONE
 "hi Comment guifg=#5C6370 ctermbg=59
+
 "hi Normal ctermbg=252 ctermbg=None
 " ===
 " === NERDTree
@@ -511,16 +512,3 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 let g:indentLine_setColors = 0
 let g:indentLine_color_term = 239
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
-
-"=
-"===vim-floaterm
-"=
-autocmd User Startified setlocal buflisted
-let  g:floaterm_keymap_new     =  '<Leader>fo'
-let  g:floaterm_keymap_next    =  '<F8>'
-let  g:floaterm_keymap_kill    =  '<Leader>fk'
-let  g:floaterm_keymap_toggle  =  '<Leader>ft'
-map  <Leader>fl :FloatermNew lf<CR>
-map  <Leader>ff :FZF<CR>
-map  <Leader>fg :FloatermNew lazygit<CR>
