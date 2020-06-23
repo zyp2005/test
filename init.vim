@@ -88,6 +88,10 @@ Plug 'skreek/skeletor.vim'
 Plug 'beikome/cosme.vim'
 Plug 'hzchirs/vim-material'
 
+"translate
+Plug 'ianva/vim-youdao-translater'
+Plug 'voldikss/vim-translator'
+
 " floaterm
 Plug 'voldikss/vim-floaterm'
 
@@ -152,7 +156,7 @@ Plug 'neoclide/coc.nvim', {'branch':'release'}
 
 call plug#end()
 
-"set t_Co=256
+set t_Co=256
 "colorscheme molokai
 "let g:molokai_original = 1
 "let g:rehash256 = 1
@@ -518,9 +522,26 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 "=
 autocmd User Startified setlocal buflisted
 let  g:floaterm_keymap_new     =  '<Leader>fo'
-let  g:floaterm_keymap_next    =  '<F8>'
+"let  g:floaterm_keymap_next    =  '<C-f><C-n>'
+let  g:floaterm_keymap_next    =  '<Leader>fn'
 let  g:floaterm_keymap_kill    =  '<Leader>fk'
-let  g:floaterm_keymap_toggle  =  '<Leader>ft'
+let  g:floaterm_keymap_toggle  =  '<Leader>fh'
 map  <Leader>fl :FloatermNew lf<CR>
 map  <Leader>ff :FZF<CR>
 map  <Leader>fg :FloatermNew lazygit<CR>
+
+"=
+"==translate
+"=
+" <Leader>tt 翻译光标下的文本，在命令行回显
+nmap <silent> <Leader>tt <Plug>Translate
+vmap <silent> <Leader>tt <Plug>TranslateV
+" Leader>tw 翻译光标下的文本，在窗口中显示
+nmap <silent> <Leader>tw <Plug>TranslateW
+vmap <silent> <Leader>tw <Plug>TranslateWV
+" Leader>tr 替换光标下的文本为翻译内容
+nmap <silent> <Leader>tr <Plug>TranslateR
+vmap <silent> <Leader>tr <Plug>TranslateRV
+let g:translator_window_max_width = 0.5
+let g:translator_window_max_height = 0.5
+
